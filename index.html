@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKURA SKY</title>
+    <link rel="shortcut icon" type="image/x-icon" href="others/pavi.png">
+    <link type="text/css" rel="stylesheet" href="others/default.css">
+    <link type="text/css" rel="stylesheet" href="others/layout.css">
+    <link id="css1" type="text/css" rel="stylesheet" href="others/facility.css">
+
+    <!--
+    메인 main.css
+    시설안내 facility.css
+    관람안내 viewing.css
+    고객센터 및 기타 customer.css
+    -->
+    <script type="text/javascript" id="www-widgetapi-script" src="others/www-widgetapi.js." async=""></script>
+    <script type="text/javascript" src="others/jquery-1.11.3.min.js."></script>
+    <script type="text/javascript" src="others/jquery-ui.js."></script>
+    <script type="text/javascript" src="others/TweenMax.min.js."></script>
+    <script type="text/javascript" src="others/slick.min.js."></script> <!-- slide -->
+    <script type="text/javascript" src="others/common.js."></script>
+    <script type="text/javascript" src="others/sub_player.js."></script>
+
+</head>
+		<div class="wrap">
+			<div id="skipnavi">
+				<a href="#">본문 바로가기</a>
+			</div>
+        <header class="header">
+
+			<style>
+					.prpopup span{display: none; }
+				@media (max-width:768px){
+					#ismsLogo{display: none;}
+					.prpopup span{display: inline-block; margin-left:10%;}
+				}
+			</style>
+			
+			<script type="text/javascript">
+				$(document).ready(function(){
+					// 그룹PR팝업 OPEN
+					$('.prpopup').click(function(){
+                    $('.moviepop-dim').show();
+                    $('html').css("overflow", "hidden");})
+					    // 그룹PR팝업 CLOSE
+					$('.moviepop-dim').find('.close-btn').click(function(){
+                    $('.moviepop-dim').hide();
+                    $('html').css("overflow", "auto");
+					})
+				});
+			</script>
+
+		<!-- // 그룹pr팝업 -->
+
+		<h1 class="logo">
+			<a href="#"><span>SAKURA SKY</span></a>
+		</h1>
+
+		<button type="button" class="btnMenuView"><span></span></button> 
+		
+		<div class="megaMenu">
+			<section class="container" >
+                
+				<h2 class="blind">전체메뉴</h2>
+				<nav class="menuWrap">
+					<ul>
+						<li class="gnb1111">
+							<h3><a href="#">SAKURA SKY</a></h3> <!-- 클릭시 부모 li에 class="active" 추가 -->
+							<ul class="depth">
+								<li><a href="#">SAKURA SKY 소개</a></li>
+								<li><a href="#">갤러리</a></li>
+								<li><a href="#">오시는길</a></li>
+								<li><a href="#">광고/제휴</a></li>
+							</ul>
+						</li>
+						<li class="gnb1111">
+							<h3><a href="#">시설안내</a></h3>
+							<ul class="depth">
+								<li><a href="#">어트랙션</a></li>
+								<li><a href="#">시설소개</a></li>
+								<li><a href="#">스카이 브릿지 투어</a></li>
+							</ul>
+						</li>
+						<li class="gnb1111">
+							<h3><a href="#">관람안내</a></h3>
+							<ul class="depth">
+								<li><a href="#">이용안내</a></li>
+								<li><a href="#">이벤트</a></li>
+								<li><a href="#">우대혜택</a></li>
+								<li><a href="#">단체/기업체</a></li>
+							</ul>
+						</li>
+						<li class="gnb1111">
+							<h3><a href="#e">온라인예매</a></h3>
+							<ul class="depth">
+								<li>
+									<a href="#" target="_blank" title="새창열림">이용권예매</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" title="새창열림">마이페이지</a>
+								</li>
+							</ul>
+						</li>
+						<li class="gnb1111">
+							<h3><a href="#">고객센터</a></h3>
+							<ul class="depth">
+                                <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                <li><a href="#">고객의 소리함</a>
+                                    <ul class="header__2depth header-list">
+                                        <li><a href="#" style="background: none;">- 이용문의</a></li>
+                                        <li><a href="#" style="background: none;">- 고객의 말씀</a></li>
+                                        <li><a href="#" style="background: none;">- 유실물센터</a></li>
+                                    </ul>
+                                </li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<section class="topMenuWrap">
+					<h3 class="blind">로그인 영역</h3>
+					<ul class="info"></ul>
+					<div class="utility">
+						<div class="language">
+							<button type="button" class="current">KOR</button>
+							<ul>
+								<li><a href="#">KOR</a></li>
+								<li><a href="#">ENG</a></li>
+								<li><a href="#">JPN</a></li>
+								<li><a href="#">CHN</a></li>
+							</ul>
+						</div>
+						<div class="business">
+							<button type="button" class="current">SAKURA SKY</button>
+						</div>
+					</div>
+				</section>
+			</section>
+                <button type="button" class="btnMenuClose" style="opacity: 1; transform: matrix(0, 1, -1, 0, 0, 0);"><span>전체메뉴 닫기</span></button>
+                <div class="dim"></div>
+		</div>
+        
+    </header>
+<!-- Header끝 -->
+
+    <div id="contentsWrap">
+    <div class="container">
+    <div class="lnbWrap">
+        <div style="display: none;" id="intro">
+            <nav>
+                <h2 class="blind">서브메뉴</h2>
+                <ul class="depth">
+                    <li><h3><a href="#">SEOUL SKY 소개</a></h3></li>
+                    <li><h3><a href="#">갤러리</a></h3></li>				
+                    <li><h3><a href="#">오시는길</a></h3></li>
+                    <li><h3><a href="#">광고/제휴</a></h3></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="facility">
+            <nav>
+                <h2 class="blind">서브메뉴</h2>
+                <ul class="depth">
+                    <li><h3><a href="#">어트랙션</a></h3></li>
+                    <li class="active"><h3><a href="#">시설소개</a></h3></li>
+                    <li><h3><a href="#">스카이 브릿지 투어</a></h3></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="display: none;" id="watch">
+            <nav>
+                <h2 class="blind">서브메뉴</h2>
+                <ul class="depth">
+                    <li><h3><a href="#">이용안내</a></h3></li>
+                    <li><h3><a href="#">이벤트</a></h3></li>
+                    <li><h3><a href="#">우대혜택</a></h3></li>
+                    <li><h3><a href="#">단체/기업체</a></h3></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="display: none;" id="voc">
+            <nav>
+                <h2 class="blind">서브메뉴</h2>
+                <ul class="depth">
+                    <li><h3><a href="#">공지사항</a></h3></li>
+                    <li><h3><a href="#">이용문의</a></h3></li>
+                    <li><h3><a href="#">FAQ</a></h3></li>
+                    <li><h3><a href="#">고객의 말씀</a></h3></li>
+                    <li><h3><a href="#">유실물 센터</a></h3></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="display: none;" id="etc">
+            <nav>
+                <h2 class="blind">서브메뉴</h2>
+                <ul class="depth">
+                    <li><h3><a href="#">이용약관</a></h3></li>
+                    <li><h3><a href="#">개인정보처리방침</a></h3></li>
+                    <li><h3><a href="#">이메일무단수집거부</a></h3></li>
+                    <li><h3><a href="#">영상정보처리 기기운영/관리방침</a></h3></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<!-- 슬라이드메뉴 끝 -->
+<section id="UI-PC-SK-010" class="contents">
+    <header class="conTitWrap">
+        <h2 class="pageTit">카페&amp;라운지</h2>
+        <div class="location">
+            <div class="location2">
+                <span class="home"><a href="#" title="Home"><span>Home</span></a></span>
+                <span class="title2span"><a href="#" class="title2">시설소개</a></span>
+                <strong class="title1">카페&amp;라운지</strong>
+            </div>
+            
+        </div>
+    </header>
+
+  <div class="defaultTab">
+    <ul>
+      <li>
+        <a href="#">벚꽃비밀정원</a>
+      </li>
+      <li>
+        <a href="#">스카이 맵핑쇼</a>
+      </li>
+      <li>
+        <a href="#">SKY SHOW<br>(스카이쇼)</a>
+      </li>
+      <li>
+        <a href="#">SKY PLATFORM<br>(전시존)</a>
+      </li>
+      <li>
+        <a href="#">메인전망대</a>
+      </li>
+      <li><a href="#">상품점</a></li>
+      <li>
+        <a href="#">카페 &amp; 라운지</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="facilityArea">
+    <img src="others/img_UI-PC-SK-010_01.jpg" alt="LOVE LOUNGE 전경">
+    <h3 class="contTit">
+      <span class="pointColor">LOVE</span> LOUNGE
+    </h3>
+    <strong class="smallTit">Taste of SAKURA above the cloud 구름 위에서 잊지 못할 벚꽃을 만나다</strong>
+    <p>
+      - 높고 웅장한 커튼월을 통한 최고층의 전망과 함께 다양한 메뉴를 즐길 수 있는 프리미엄 라운지<br>
+      - 프로포즈 이벤트, 웨딩 피로연, 브랜드 론칭 행사 등 대관이 가능합니다. (02-1234-5678)
+    </p>
+    <div class="cafenloungeBtnWrap">
+      <a href="#" title="SPECIAL PROMOTION 이동" class="cafenloungeBtn">SPECIAL PROMOTION</a>
+      <a href="#" title="대관 행사이동" class="cafenloungeBtn">대관 행사</a>
+    </div>
+    <div class="cafenloungeImgWrap">
+      <img src="others/img_cafenlounge01.jpg" alt="">
+      <img src="others/img_cafenlounge02.jpg" alt="">
+      <img src="others/img_cafenlounge03.jpg" alt="">
+      <img src="others/img_cafenlounge04.jpg" alt="">
+      <img src="others/img_cafenlounge05.jpg" alt="">
+      <img src="others/img_cafenlounge06.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="facilityArea">
+    <img src="others/img_UI-PC-SK-010_02.jpg" alt="122F SEOUL SKY CAFÉ 전경">
+    <h3 class="contTit">
+      <span class="pointColor">HAPPY</span> SAKURA SKY CAFÉ <span class="small">(벚꽃 하늘 카페)</span>
+    </h3>
+    <strong class="smallTit">하늘 아래 가장 포근한 카페 - 벚꽃 라떼 전문점</strong>
+    <p class="txt">벚꽃하늘에서만 즐길 수 있는 시그니처 음료를 즐겨보세요</p>
+  </div>
+
+  <div class="facilityArea">
+    <img src="others/img_UI-PC-SK-010_03.jpg" alt="119F SKY FRIENDS CAFE 전경">
+    <h3 class="contTit">
+      <span class="pointColor">LUCKY</span> SKY FRIENDS CAFE <span class="small">(스카이 프렌즈 카페)</span>
+    </h3>
+    <strong class="smallTit">가장 포근한 곳에서 맛보는 맛있는 소프트 아이스크림 </strong>
+  </div>
+</section>
+
+				</div>
+			</div>
+
+            <section id="contents_3" z-index: 1;>
+                <div class="notice_1">
+                    <p class="notice_title">공지사항</p>
+                    <p class="more"><a href="#">MORE ❀</a></p>
+                    <ul>
+                        <li>
+                        <a href="#">공지사항 test..공지사항 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">공지사항 test..공지사항 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항 test..공지사항 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항 test..공지사항 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항 test..공지사항 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li>
+                        
+                    </ul>
+                
+                </div>
+                
+                <div class="notice_1">
+                    <p class="notice_title">공지사항2</p>
+                    <p class="more"><a href="#">MORE ❀</a></p>
+                    <ul>
+                        <li>
+                        <a href="#">공지사항2 test..공지사항2 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">공지사항2 test..공지사항2 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항2 test..공지사항2 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항2 test..공지사항2 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항2 test..공지사항2 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li>
+                        
+                    </ul>
+                
+                </div>
+            
+                <div class="notice_2">
+                    <p class="notice_title">공지사항3</p>
+                    <p class="more"><a href="#">MORE ❀</a></p>
+                    <ul>
+                        <li>
+                        <a href="#">공지사항3 test..공지사항3 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#">공지사항3 test..공지사항3 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항3 test..공지사항3 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항3 test..공지사항3 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li><li>
+                        <a href="#">공지사항3 test..공지사항3 test..
+                        <span>2021-01-22</span>
+                        </a>
+                        </li>
+                        
+                    </ul>
+                
+                </div>
+            </section>
+            
+
+
+
+			<footer class="footer">
+				
+<div class="container">
+    <div class="fo_ri">
+        <div class="footMenuWrap">
+            <ul>
+                <li><a href="#">SAKURA SKY 소개</a></li>
+                <li><a href="#" class="privacy">개인정보처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">이메일주소무단수집거부</a></li>
+                <li><a href="#">영상정보처리 기기운영/관리방침</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">그룹PR</a></li>
+            </ul>
+        </div>
+        <section class="familySiteWrap">
+            <h2>
+                <button type="button" class="btnFamilyView"></button>
+            </h2>
+            <div class="familySite">
+                <ul>
+                    <li><a href="#">사랑</a></li>
+                    <li><a href="#">우정</a></li>
+                    <li><a href="#">행복</a></li>
+                    <li><a href="#">풍요</a></li>
+
+                </ul>
+            </div>
+        </section>
+        <div class="copy">
+            <address>서울특별시 안양천변 벚꽃길</address>
+            <br>
+			<span> 대표자 : 꽃비단 | 대표전화 : 1234-5678</span>
+				<span style="margin-left: 10%;">그룹PR</span>
+			</a>
+			<br>
+			<span>전자우편주소 : happysakura@spring.net</span>
+			<br>
+			<small>Copyright© 2021 SAKURA SKY. All Rights Reserved.</small>
+		</div>
+		<div id="ismsLogo">
+			<a href="#" target="_blank" title="새창으로 알림">
+				<ul>
+					<li>인증범위 | 온라인 예매 서비스 운영</li>
+					<li>유효기간 | 2021.2.18~2023.2.18</li>
+				</ul>
+			</a>
+		</div>
+        <!--  -->
+
+</body></html>
